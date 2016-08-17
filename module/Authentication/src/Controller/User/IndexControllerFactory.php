@@ -1,13 +1,13 @@
 <?php
 
-namespace T4web\Authentication\Controller\User;
+namespace Authentication\Controller\User;
 
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\Mvc\Controller\Plugin\Redirect;
 use Zend\Mvc\Router\Http\RouteMatch;
 use Zend\Mvc\Application;
-use T4web\Authentication\Service\InteractiveAuth;
+use Authentication\Service\InteractiveAuth;
 
 class IndexControllerFactory implements FactoryInterface
 {

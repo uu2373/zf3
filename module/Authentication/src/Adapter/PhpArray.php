@@ -1,6 +1,6 @@
 <?php
 
-namespace T4web\Authentication\Adapter;
+namespace Authentication\Adapter;
 
 use Zend\Authentication\Adapter\ValidatableAdapterInterface;
 use Zend\Authentication\Result;

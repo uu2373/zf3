@@ -1,10 +1,10 @@
 <?php
 
-namespace T4web\Authentication\Listener;
+namespace Authentication\Listener;
 
 use Zend\Session\SessionManager;
-use T4web\Authentication\AuthenticationEvent;
-use T4web\Authentication\Exception\RuntimeException;
+use Authentication\AuthenticationEvent;
+use Authentication\Exception\RuntimeException;
 
 class SessionWrite
 {

@@ -1,5 +1,5 @@
 <?php
-namespace T4web\Authentication\Service;
+namespace Authentication\Service;
 
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\ServiceManager\FactoryInterface;

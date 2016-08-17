@@ -1,6 +1,6 @@
 <?php
 
-namespace T4web\Authentication\Controller\User;
+namespace Authentication\Controller\User;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;

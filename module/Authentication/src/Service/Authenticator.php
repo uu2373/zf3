@@ -1,12 +1,12 @@
 <?php
 
-namespace T4web\Authentication\Service;
+namespace Authentication\Service;
 
 use Zend\Authentication\AuthenticationService;
 use Zend\Authentication\Result as AuthResult;
 use Zend\Authentication\Adapter\AdapterInterface;
 use Zend\EventManager\EventManager;
-use T4web\Authentication\AuthenticationEvent;
+use Authentication\AuthenticationEvent;
 
 class Authenticator extends AuthenticationService
 {

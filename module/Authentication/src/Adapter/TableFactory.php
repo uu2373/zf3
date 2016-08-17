@@ -1,6 +1,6 @@
 <?php
 
-namespace T4web\Authentication\Adapter;
+namespace Authentication\Adapter;
 
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;

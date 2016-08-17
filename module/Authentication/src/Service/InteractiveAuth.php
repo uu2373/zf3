@@ -1,12 +1,12 @@
 <?php
-namespace T4web\Authentication\Service;
+namespace Authentication\Service;
 
 use Zend\Authentication\Adapter\AdapterInterface;
 use Zend\Authentication\Adapter\ValidatableAdapterInterface;
 use Zend\Authentication\Result;
 use Zend\Authentication\Storage\Session;
 use Zend\Session\SessionManager;
-use T4web\Authentication\Exception\RuntimeException;
+use Authentication\Exception\RuntimeException;
 
 /**
  * Class InteractiveAuth

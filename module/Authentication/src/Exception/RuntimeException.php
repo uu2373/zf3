@@ -1,5 +1,5 @@
 <?php
-namespace T4web\Authentication\Exception;
+namespace Authentication\Exception;
 
 class RuntimeException extends \RuntimeException
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace T4web\Authentication\Listener;
+namespace Authentication\Listener;
 
 use Zend\Authentication\AuthenticationService;
-use T4web\Authentication\AuthenticationEvent;
+use Authentication\AuthenticationEvent;
 
 class DispatchAuthentication
 {
