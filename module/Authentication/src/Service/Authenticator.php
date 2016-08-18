@@ -53,6 +53,7 @@ class Authenticator extends AuthenticationService
         }
 
         $eventManager = new EventManager();
+        //print_r(get_class($this));exit;
         $eventManager->setIdentifiers(get_class($this));
 
         $eventManager->trigger($event);

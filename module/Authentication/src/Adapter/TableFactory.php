@@ -6,8 +6,8 @@ use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\Authentication\Adapter\DbTable\CallbackCheckAdapter as AuthenticationAdapter;
 use Zend\Db\Adapter\Adapter as DbAdapter;
-use T4web\Authentication\Exception\RuntimeException;
-use T4webInfrastructure\Config;
+use Authentication\Exception\RuntimeException;
+//use T4web\Infrastructure\Config;
 
 class TableFactory implements FactoryInterface
 {

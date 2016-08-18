@@ -9,6 +9,7 @@ use Tracy\Debugger;
  * to the application root now.
  */
 chdir(dirname(__DIR__));
+ini_set('opcache.enable', 0);
 
 // Decline static file requests back to the PHP built-in webserver
 if (php_sapi_name() === 'cli-server') {
@@ -37,6 +38,6 @@ if (file_exists(__DIR__ . '/../config/development.config.php')) {
     $appConfig = ArrayUtils::merge($appConfig, require __DIR__ . '/../config/development.config.php');
 }
 
-Debugger::enable();
+Debugger::enable(Debugger::DEVELOPMENT);
 // Run the application!
 Application::init($appConfig)->run();

@@ -5,7 +5,7 @@ namespace Authentication\Controller\User;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Zend\Mvc\Controller\Plugin\Redirect;
-use T4web\Authentication\Service\InteractiveAuth;
+use Authentication\Service\InteractiveAuth;
 
 class IndexController extends AbstractActionController
 {
@@ -50,7 +50,7 @@ class IndexController extends AbstractActionController
 
         $username = $this->getRequest()->getPost('username');
         $password = $this->getRequest()->getPost('password');
-        
+
         if (empty($username) || empty($password)) {
             $view = new ViewModel();
             $view->errorMessage = 'User name or pass cannot be empty.';

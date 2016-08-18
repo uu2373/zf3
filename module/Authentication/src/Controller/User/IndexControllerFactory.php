@@ -2,12 +2,15 @@
 
 namespace Authentication\Controller\User;
 
-use Zend\ServiceManager\FactoryInterface;
+//use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
+use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\Mvc\Controller\Plugin\Redirect;
 use Zend\Mvc\Router\Http\RouteMatch;
 use Zend\Mvc\Application;
 use Authentication\Service\InteractiveAuth;
+
 
 class IndexControllerFactory implements FactoryInterface
 {
@@ -15,12 +18,11 @@ class IndexControllerFactory implements FactoryInterface
      * @param ServiceLocatorInterface $cm
      * @return IndexController
      */
-    public function createService(ServiceLocatorInterface $cm)
-    {
-        $sl = $cm->getServiceLocator();
+//    public function createService(ServiceLocatorInterface $cm)
+    function __invoke(ContainerInterface $container, $requestedName, array $options = null){
 
         /** @var Application $app */
-        $app = $sl->get('Application');
+        $app = $container->get('Application');
         $event = $app->getMvcEvent();
 
         /** @var RouteMatch $routeMatch */
@@ -36,13 +38,13 @@ class IndexControllerFactory implements FactoryInterface
             $redirectToUrl = $routeMatch->getParam('redirect-to-url');
         }
 
-        $plugins = $sl->get('ControllerPluginManager');
+        $plugins = $container->get('ControllerPluginManager');
 
         /** @var Redirect $redirect */
         $redirect = $plugins->get('redirect');
 
         $controller = new IndexController(
-            $sl->get(InteractiveAuth::class),
+            $container->get(InteractiveAuth::class),
             $redirect,
             $redirectToUrl
         );
